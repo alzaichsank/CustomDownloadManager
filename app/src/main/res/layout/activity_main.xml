@@ -1,18 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/_14sdp"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="@dimen/_18ssp"
+        android:text="Welcome "
+        android:layout_marginTop="@dimen/_4sdp"
+        android:textStyle="bold|italic"
+        android:textColor="@color/colorPrimary"
+        android:layout_centerHorizontal="true" />
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/info"
+        android:textSize="@dimen/_12ssp"
+        android:padding="@dimen/_10sdp"
+        android:text="Please chose your type file, and wait until file downlaoded.."
+        android:layout_marginTop="@dimen/_40sdp"
+        android:textColor="@color/text_white"
+        android:background="@color/colorGrey2"
+        android:layout_centerHorizontal="true" />
+<!--pdf-->
+    <LinearLayout
+        android:layout_below="@+id/info"
+        android:id="@+id/downlaodpdf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_18ssp"
+            android:text="PDF : "
+            android:layout_marginTop="@dimen/_4sdp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:layout_centerHorizontal="true" />
+
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/download_pdf"
+            android:gravity="center"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_shape"
+            android:text="Download PDF"
+            android:textAllCaps="true"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/_10sdp" />
+    </LinearLayout>
+<!--doc-->
+    <LinearLayout
+        android:layout_below="@+id/downlaodpdf"
+        android:id="@+id/downlaoddoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_18ssp"
+            android:text="DOC : "
+            android:layout_marginTop="@dimen/_4sdp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:layout_centerHorizontal="true" />
+
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/download_doc"
+            android:gravity="center"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_shape"
+            android:text="Download DOC"
+            android:textAllCaps="true"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/_10sdp" />
+    </LinearLayout>
+<!--ppt-->
+    <LinearLayout
+        android:layout_below="@+id/downlaoddoc"
+        android:id="@+id/downloadppt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_18ssp"
+            android:text="PPT : "
+            android:layout_marginTop="@dimen/_4sdp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:layout_centerHorizontal="true" />
+
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/download_ppt"
+            android:gravity="center"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_shape"
+            android:text="Download PPT"
+            android:textAllCaps="true"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/_10sdp" />
+    </LinearLayout>
+<!--xls-->
+    <LinearLayout
+        android:layout_below="@+id/downloadppt"
+        android:id="@+id/downlaodxls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_18ssp"
+            android:text="XLS : "
+            android:layout_marginTop="@dimen/_4sdp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:layout_centerHorizontal="true" />
+
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/download_xls"
+            android:gravity="center"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_shape"
+            android:text="Download xls"
+            android:textAllCaps="true"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/_10sdp" />
+    </LinearLayout>
+</RelativeLayout>
