@@ -58,6 +58,9 @@ class MainActivity : AppCompatActivity() {
         download_doc.setOnClickListener{
             download(link_doc)
         }
+        download_ppt.setOnClickListener{
+            download(link_ppt)
+        }
 
 
     }
