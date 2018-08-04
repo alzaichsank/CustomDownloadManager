@@ -51,10 +51,14 @@ class MainActivity : AppCompatActivity() {
         {
         }
 
-//        let download
+//        lets download
         download_pdf.setOnClickListener{
             download(link_pdf)
         }
+        download_doc.setOnClickListener{
+            download(link_doc)
+        }
+
 
     }
     //downloader
